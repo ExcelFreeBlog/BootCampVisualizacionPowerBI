@@ -1,0 +1,11 @@
+Renderizar Imagen = 
+IF(
+    HASONEVALUE(ImagenesLocales[Nombre]) ;
+    "data:image/jpeg;base64, " & 
+    CONCATENATEX(
+        ImagenesLocales ; 
+        ImagenesLocales[Imagen] ;
+        ;
+        ImagenesLocales[Índice];
+        ASC)
+)
